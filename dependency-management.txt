@@ -1,0 +1,41 @@
+Dependency Management Software
+------------------------------------
+Software or a utility that allows you to manage packages or libraries that are external to your current codebase.
+
+
+JAR - Java Archive - Collection of classes and other resources packaged as a single re-distributable file/library.
+
+Java Web application Structure
+java-application
+	- WEBINF
+		lib/*.jar, *.properties
+	/jsp
+	/admin
+
+- Manage dependencies of the project
+- Manage build lifecycle of the project
+
+
+Java Dependency Management Tools
+- Apache Ant
+	- Manual (Download dependencies manually, not-centralized).
+	- Not supporting transitive depdencies
+
+- Apache Maven
+	- Automated depdendency management with a centralized repository.
+	- XML based config
+	- Supports transitive dependencies
+
+- Gradle
+	- Automated depdendency management with a centralized repository. Uses maven repository
+	- DSL(Domain Specific Language) Style of config with a task structure
+
+Transitive dependency management
+------------------------------------
+SpringMVC Application
+	- spring-web-XYZ.jar
+		- spring-context
+			- apache-commons-codec
+				- apache-commons-lib
+		- spring-annotation
+
