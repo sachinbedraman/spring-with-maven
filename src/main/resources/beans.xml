@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="service" class="org.example.spring.beanfactory.Service" scope="singleton" />
+
+    <bean id="client" class="org.example.spring.beanfactory.Client" scope="singleton">
+        <constructor-arg name="service" ref="service"/>
+        <constructor-arg name="message" value="Set via Constructor"/>
+        <!--<property name="service" ref="service"/>-->
+    </bean>
+
+    <bean id="circle" class="org.example.spring.beanfactory.shapes.Circle" />
+    <bean id="square" class="org.example.spring.beanfactory.shapes.Square" />
+
+    <bean id="drawing" class="org.example.spring.beanfactory.shapes.Drawing">
+        <constructor-arg name="shape" ref="square"/>
+    </bean>
+
+
+</beans>

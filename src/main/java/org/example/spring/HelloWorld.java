@@ -1,9 +1,15 @@
 package org.example.spring;
 
+import org.example.spring.beanfactory.Client;
+import org.example.spring.beanfactory.Service;
+
 public class HelloWorld {
 
-    public void sayHello(String name){
-        System.out.println("Hello World " + name);
+    public static void main(String[] args){
+
+        //Client client = new Client(new Service());
+        //client.foo();
+
     }
 
 }
