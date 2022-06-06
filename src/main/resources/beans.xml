@@ -8,6 +8,12 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- Activate the annotations -->
+    <context:annotation-config/>
+
+    <!-- Specify which packages to scan for annotations -->
+    <context:component-scan base-package="org.example.spring"/>
+
     <bean id="service" class="org.example.spring.beanfactory.Service" scope="singleton" />
 
     <bean id="client" class="org.example.spring.beanfactory.Client" scope="singleton">
